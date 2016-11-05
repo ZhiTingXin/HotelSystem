@@ -6,9 +6,9 @@ import VO.SystemStrategyVO;
 import blservice.SystemStrategy_blservice;
 import blservice.impl.SystemStrategy_bl;
 import other.ResultMessage;
-import presentation.view.systemStrategy_ui.SystemStrategy;
+import presentation.view.systemStrategy_ui.SystemStrategyControllerService;
 
-public class SystemStrategyController implements  SystemStrategy{
+public class SystemStrategyController implements  SystemStrategyControllerService{
 	
 	private SystemStrategy_blservice systemStrategy_blservice;
 	

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import VO.SystemStrategyVO;
 import other.ResultMessage;
 
-public interface SystemStrategy {
+public interface SystemStrategyControllerService {
     
 	public ArrayList<SystemStrategyVO> getAllSystemStrategys(String systemStaffID);
 	
