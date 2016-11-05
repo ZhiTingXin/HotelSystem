@@ -5,6 +5,7 @@ import other.AdviceFeedBackState;
 public class AdviceFeedBackPO {
        AdviceFeedBackState state;
        String AdviceFeedBack_content;
+       String AdviceId;
        
        public AdviceFeedBackPO(){
     	   super();
@@ -30,5 +31,13 @@ public class AdviceFeedBackPO {
 
 	public void setAdviceFeedBack_content(String adviceFeedBack_content) {
 		AdviceFeedBack_content = adviceFeedBack_content;
+	}
+
+	public String getAdviceId() {
+		return AdviceId;
+	}
+	
+	public void setAdviceId(String adviceId){
+		AdviceId = adviceId;
 	}
 }
