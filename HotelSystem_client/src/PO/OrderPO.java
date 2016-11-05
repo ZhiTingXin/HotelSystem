@@ -14,5 +14,5 @@ public class OrderPO {
 	
 	private String lastTime;
 	
-	private String orderInfo;
+//	private String orderInfo;
 }
