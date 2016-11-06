@@ -3,24 +3,26 @@ package presentation.controller.adviceFeedBackController;
 import java.util.ArrayList;
 
 import VO.AdviceFeedBackVO;
+import blservice.AdviceFeedBack_blservice;
 import other.ResultMessage;
 import presentation.view.adviceFeedBack_ui.AdviceReplyControllerService;
 
 public class AdviceReplyController implements AdviceReplyControllerService{
 
+	private AdviceFeedBack_blservice advicefeedbackblservice;
 	public ArrayList<AdviceFeedBackVO> getUnprocessedAdvice(String systemstaffId) {
 		// TODO Auto-generated method stub
-		return null;
+		return advicefeedbackblservice.getUnprocessedAdvice(systemstaffId);
 	}
 
 	public ArrayList<AdviceFeedBackVO> getProcessedAdvice(String systemstaffId) {
 		// TODO Auto-generated method stub
-		return null;
+		return advicefeedbackblservice.getProcessedAdvice(systemstaffId);
 	}
 
 	public ResultMessage setStateOfAdvice(String Adviceid) {
 		// TODO Auto-generated method stub
-		return null;
+		return advicefeedbackblservice.setStateOfAdvice(Adviceid);
 	}
 
 }
