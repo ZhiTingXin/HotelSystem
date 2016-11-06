@@ -2,50 +2,75 @@ package blservice.impl;
 
 import java.util.ArrayList;
 
-import VO.OrderVO;
+import PO.OrderPO;
+import PO.PrivilegePO;
 import VO.OrderState;
+import VO.ResultMessage;
+import VO.RoomType;
 import blservice.Order_blservice;
 
 public class Order_bl implements Order_blservice{
 
-	public OrderState getState(String orderID) {
-		// TODO Auto-generated method stub
-		return null;
+	public OrderState getState(int orderID) {
+		return OrderState.ABNOMAL;
 	}
 
-	public OrderState getOrder(String orderID) {
-		// TODO Auto-generated method stub
-		return null;
+	public OrderPO getOrder(int orderID) {
+		return new OrderPO();
 	}
 
-	public ArrayList<OrderVO> getOrdersOfUsers(String userID) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<OrderPO> getOrdersOfUsers(int userID) {
+		ArrayList<OrderPO> aList = new ArrayList<OrderPO>();
+		OrderPO tempPO = new OrderPO();
+		aList.add(tempPO);
+		return aList;
 	}
 
-	public OrderVO createOrder(OrderVO order_info) {
-		// TODO Auto-generated method stub
-		return null;
+	public OrderPO createOrder(OrderPO order_info) {
+		return new OrderPO();
 	}
 
-	public ArrayList<OrderVO> getUnfinishedOrders(String userID) {
-		// TODO Auto-generated method stub
-		return null;
+	public ResultMessage changeState(OrderPO order_info) {
+		return ResultMessage.FAILED;
 	}
 
-	public ArrayList<OrderVO> getAbnomalOrders(String userID) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<OrderPO> getUnfinishedOrders(int userID) {
+		ArrayList<OrderPO> aList = new ArrayList<OrderPO>();
+		OrderPO tempPO = new OrderPO();
+		aList.add(tempPO);
+		return aList;
 	}
 
-	public ArrayList<OrderVO> getHotelOrders(String userID, String hotelID) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<OrderPO> getAbnomalOrders(int userID) {
+		ArrayList<OrderPO> aList = new ArrayList<OrderPO>();
+		OrderPO tempPO = new OrderPO();
+		aList.add(tempPO);
+		return aList;
 	}
 
-	public OrderVO getOrderDetail(String orderID) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<OrderPO> getHotelOrders(int userID, int hotelID) {
+		ArrayList<OrderPO> aList = new ArrayList<OrderPO>();
+		OrderPO tempPO = new OrderPO();
+		aList.add(tempPO);
+		return aList;
 	}
+
+	public boolean checkRoomType(int hotelID, RoomType type) {
+		return false;
+	}
+
+	public ArrayList<PrivilegePO> getRecommendations(int userID, int hotelID) {
+		ArrayList<PrivilegePO> aList = new ArrayList<PrivilegePO>();
+		PrivilegePO tempPO = new PrivilegePO();
+		aList.add(tempPO);
+		return aList;
+	}
+
+	public boolean generateOrder(OrderPO aOrder) {
+		return false;
+	}
+
+
+
 
 }
