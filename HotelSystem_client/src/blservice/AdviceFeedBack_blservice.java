@@ -18,4 +18,7 @@ public interface AdviceFeedBack_blservice {
     public ArrayList<AdviceFeedBackVO> getProcessedAdvice(String systemstaffId);
 	
 	public ResultMessage setStateOfAdvice(String Adviceid);
+	//本方法为测试方法，到时删除
+	public String getMockID();
+	public void setMock(AdviceFeedBackVO advice);
 }

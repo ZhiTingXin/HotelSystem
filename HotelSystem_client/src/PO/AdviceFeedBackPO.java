@@ -11,10 +11,11 @@ public class AdviceFeedBackPO {
     	   super();
        }
        
-       public AdviceFeedBackPO(AdviceFeedBackState state1,String adviceFeedBack_content){
+       public AdviceFeedBackPO(AdviceFeedBackState state1,String adviceFeedBack_content,String AdviceID){
     	   super();
     	   this.AdviceFeedBack_content = adviceFeedBack_content;
     	   this.state = state1;
+    	   this.AdviceId =AdviceID;
        }
 
 	public AdviceFeedBackState getState() {
