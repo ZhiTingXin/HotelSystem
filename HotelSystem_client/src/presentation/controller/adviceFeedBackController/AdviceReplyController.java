@@ -1,5 +1,33 @@
 package presentation.controller.adviceFeedBackController;
 
-public class AdviceReplyController {
+import java.util.ArrayList;
+
+import VO.AdviceFeedBackVO;
+import blservice.AdviceFeedBack_blservice;
+import blservice.impl.AdviceFeedBack_bl;
+import other.ResultMessage;
+import presentation.view.adviceFeedBack_ui.AdviceReplyControllerService;
+
+public class AdviceReplyController implements AdviceReplyControllerService{
+
+	private AdviceFeedBack_blservice advicefeedbackblservice;
+	
+	public AdviceReplyController(){
+		advicefeedbackblservice = new AdviceFeedBack_bl();
+	}
+	public ArrayList<AdviceFeedBackVO> getUnprocessedAdvice(String systemstaffId) {
+		// TODO Auto-generated method stub
+		return advicefeedbackblservice.getUnprocessedAdvice(systemstaffId);
+	}
+
+	public ArrayList<AdviceFeedBackVO> getProcessedAdvice(String systemstaffId) {
+		// TODO Auto-generated method stub
+		return advicefeedbackblservice.getProcessedAdvice(systemstaffId);
+	}
+
+	public ResultMessage setStateOfAdvice(String Adviceid) {
+		// TODO Auto-generated method stub
+		return advicefeedbackblservice.setStateOfAdvice(Adviceid);
+	}
 
 }
