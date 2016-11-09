@@ -22,12 +22,12 @@ public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 
 	public ResultMessage addAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESS;
+		return ResultMessage.SUCCESSFUL;
 	}
 
 	public ResultMessage modifyAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
 		// TODO Auto-generated method stub
-		return ResultMessage.FAIL;
+		return ResultMessage.FAILED;
 	}
 
 	public ArrayList<AdviceFeedBackVO> getUnprocessedAdvice(String systemstaffId) {
@@ -49,7 +49,7 @@ public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 
 	public ResultMessage setStateOfAdvice(String Adviceid) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESS;
+		return ResultMessage.SUCCESSFUL;
 	}
 
 	

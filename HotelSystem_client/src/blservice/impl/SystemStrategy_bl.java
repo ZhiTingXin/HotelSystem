@@ -57,12 +57,12 @@ public class SystemStrategy_bl implements SystemStrategy_blservice{
 
 	public ResultMessage deleteSystemStrategy(String systemStrategy_Name) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESS;
+		return ResultMessage.SUCCESSFUL;
 	}
 
 	public ResultMessage modifySystemStrategy(SystemStrategyVO systemstrategyvo) {
 		// TODO Auto-generated method stub
-		return ResultMessage.FAIL;
+		return ResultMessage.FAILED;
 	}
 
 	public SystemStrategyVO makeSystemStrategy(SystemStrategyVO systemstrategyvo) {
@@ -97,7 +97,7 @@ public class SystemStrategy_bl implements SystemStrategy_blservice{
 
 	public ResultMessage modifySystemStrategy1(SystemStrategy1VO systemstrategy) {
 		// TODO Auto-generated method stub
-		return ResultMessage.FAIL;
+		return ResultMessage.FAILED;
 	}
 
 }
