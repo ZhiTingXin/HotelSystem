@@ -3,8 +3,9 @@ package presentation.controller.hotelController;
 import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
+import presentation.view.hotel_ui.HotelInfoControllerService;
 
-public class HotelInfoController {
+public class HotelInfoController implements HotelInfoControllerService{
 	Hotel_blservice hotelService;
 
 	public ResultMessage modifyHotelInfo(HotelInfoVO hotelInfo) {

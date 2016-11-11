@@ -6,8 +6,9 @@ import PO.Label;
 import PO.Rank;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
+import presentation.view.hotel_ui.HotelAssessmentControllerService;
 
-public class HotelAssessmentController {
+public class HotelAssessmentController implements HotelAssessmentControllerService{
 	Hotel_blservice hotelService;
 
 	public ResultMessage addAssessment(String hotelID, String assessment) {

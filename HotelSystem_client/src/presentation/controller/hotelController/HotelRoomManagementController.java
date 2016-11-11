@@ -4,8 +4,9 @@ import PO.HotelRoomInfoPO;
 import VO.HotelRoomInfoVO;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
+import presentation.view.hotel_ui.HotelRoomManagementControllerService;
 
-public class HotelRoomManagementController {
+public class HotelRoomManagementController implements HotelRoomManagementControllerService{
 	Hotel_blservice hotelService;
 
 	public ResultMessage roomModify(String hotelId, HotelRoomInfoVO currentInfo) {
