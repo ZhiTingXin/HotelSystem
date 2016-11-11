@@ -29,5 +29,10 @@ public class AdviceReplyController implements AdviceReplyControllerService{
 		// TODO Auto-generated method stub
 		return advicefeedbackblservice.setStateOfAdvice(Adviceid);
 	}
+	
+	public ResultMessage addAdviceFeedback(AdviceFeedBackVO advice){
+		
+		return advicefeedbackblservice.addAdviceFeedBack(advice);
+	}
 
 }

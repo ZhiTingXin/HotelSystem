@@ -9,6 +9,7 @@ import other.ResultMessage;
 
 public class UserInfo_bl implements UserInfo_blservice{
 
+	SystemManagerVO mana;
 	public SystemManagerVO getSystemManagerInfo(String SystemManager_name) {
 		
 		return null;
@@ -25,5 +26,14 @@ public class UserInfo_bl implements UserInfo_blservice{
 
 	public ResultMessage CustomerinfoShow(CustomerVO Customer) {
 		return ResultMessage.FAILED;
+	}
+//²âÊÔMock ´úÂë
+	public void add(SystemManagerVO manager) {
+		// TODO Auto-generated method stub
+		this.mana = manager;
+		return;
+	}
+	public SystemManagerVO  get(){
+		return mana;
 	}
 }

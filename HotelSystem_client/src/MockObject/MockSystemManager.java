@@ -12,8 +12,7 @@ public class MockSystemManager extends SystemManagerVO{
 		systemManagerName = systemname;
 	}
 	
-	public String modify(String changedName){
-		systemManagerName=changedName;
-		return this.systemManagerName;
+	public String getSystemmanager_Id(){
+		return this.systemManagerId;
 	}
 }
