@@ -1,6 +1,8 @@
 package presentation.view.register_ui;
 
+import other.ResultMessage;
+
 public interface RegisterControllerService {
 	
-	public boolean addRegister(String userID,String userpassword);
+	public ResultMessage addRegister(String userID,String userpassword);
 }

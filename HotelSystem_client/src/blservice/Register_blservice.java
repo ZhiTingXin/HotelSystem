@@ -1,6 +1,8 @@
 package blservice;
 
+import other.ResultMessage;
+
 public interface Register_blservice {
 
-	public Boolean addRegister(String userID,String userpassword);
+	public ResultMessage addRegister(String userID,String userpassword);
 }

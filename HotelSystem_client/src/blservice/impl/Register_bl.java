@@ -1,12 +1,13 @@
 package blservice.impl;
 
 import blservice.Register_blservice;
+import other.ResultMessage;
 
 public class Register_bl implements Register_blservice{
 
-	public Boolean addRegister(String userID, String userpassword) {
+	public ResultMessage addRegister(String userID, String userpassword) {
 		
-		return true;
+		return ResultMessage.SUCCESSFUL;
 	}
 
 }
