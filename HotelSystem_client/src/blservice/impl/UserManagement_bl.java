@@ -7,6 +7,7 @@ import VO.CustomerVO;
 import VO.HotelStaffVO;
 import VO.SystemStaffVO;
 import blservice.UserManagement_blservice;
+import other.ResultMessage;
 
 public class UserManagement_bl implements UserManagement_blservice {
 
@@ -26,16 +27,16 @@ public class UserManagement_bl implements UserManagement_blservice {
 		return list;
 	}
 
-	public boolean modifyCustomerManagement(CustomerVO customer, CustomerVO customerChange) {
+	public ResultMessage modifyCustomerManagement(CustomerVO customer, CustomerVO customerChange) {
 
 		String customer_Id = customer.getId();
 		for (CustomerPO customerPO : CustomerList) {
 			if (customer_Id == customerPO.getId()) {
 				customer = customerChange;
 			}
-			return true;
+			return ResultMessage.SUCCESSFUL;
 		}
-		return false;
+		return ResultMessage.FAILED;
 	}
 
 	public ArrayList<HotelStaffVO> getHotelStaffManagement(String hotelstaff_id) {
@@ -50,16 +51,16 @@ public class UserManagement_bl implements UserManagement_blservice {
 		return list;
 	}
 
-	public boolean modifyHotelStaffManagement(HotelStaffVO hotelStaff, HotelStaffVO hotelstaffChange) {
+	public ResultMessage modifyHotelStaffManagement(HotelStaffVO hotelStaff, HotelStaffVO hotelstaffChange) {
 
 		String hotelStaff_Id = hotelStaff.getId();
 		for (HotelStaffPO hotelStaffPO : HotelStaffList) {
 			if (hotelStaff_Id == hotelStaffPO.getId()) {
 				hotelStaff = hotelstaffChange;
 			}
-			return true;
+			return ResultMessage.SUCCESSFUL;
 		}
-		return false;
+		return ResultMessage.FAILED;
 	}
 
 	public ArrayList<SystemStaffVO> getSystemStaff(String systemStaff_id) {
@@ -74,37 +75,37 @@ public class UserManagement_bl implements UserManagement_blservice {
 		return list;
 	}
 
-	public boolean modifySystemStaffManagement(SystemStaffVO systemStaff, SystemStaffVO systemStaffChange) {
+	public ResultMessage modifySystemStaffManagement(SystemStaffVO systemStaff, SystemStaffVO systemStaffChange) {
 
 		String systemStaff_Id = systemStaff.getId();
 		for (SystemStaffPO systemStaffPO : SystemStaffList) {
 			if (systemStaff_Id == systemStaffPO.getId()) {
 				systemStaff = systemStaffChange;
 			}
-			return true;
+			return ResultMessage.SUCCESSFUL;
 		}
-		return false;
+		return ResultMessage.FAILED;
 	}
 
-	public boolean addNewHotel(String hotel_id) {
+	public ResultMessage addNewHotel(String hotel_id) {
 		if (hotel_id != null) {
 			HotelInfoPO hotelInfo = new HotelInfoPO(null);
 			hotelInfo.setHotelID(hotel_id);
-			return true;
+			return ResultMessage.SUCCESSFUL;
 		}
-		return false;
+		return ResultMessage.FAILED;
 	}
 
-	public boolean addHotelStaff(String hotel_id, HotelStaffVO hotelStaff) {
+	public ResultMessage addHotelStaff(String hotel_id, HotelStaffVO hotelStaff) {
 		if(hotel_id!=null){
 			String id = hotelStaff.getId();
 			String username = hotelStaff.getUsername();
 			String phone = hotelStaff.getHotelName();
 			String hotelName  = hotelStaff.getHotelName();
 			HotelStaffPO newHotelStaff = new HotelStaffPO(id,username, phone, hotelName);
-			return true;
+			return ResultMessage.SUCCESSFUL;
 		}
-		return false;
+		return ResultMessage.FAILED;
 	}
 
 }

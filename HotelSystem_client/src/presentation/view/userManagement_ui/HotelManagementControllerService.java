@@ -1,11 +1,12 @@
 package presentation.view.userManagement_ui;
 
 import VO.HotelStaffVO;
+import other.ResultMessage;
 
 public interface HotelManagementControllerService {
 
-	public boolean addNewHotel(String hotel_id);
+	public ResultMessage addNewHotel(String hotel_id);
 
-	public boolean addHotelStaff(String hotel_id, HotelStaffVO hotelstaff);
+	public ResultMessage addHotelStaff(String hotel_id, HotelStaffVO hotelstaff);
 
 }
