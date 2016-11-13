@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import PO.Label;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
+import presentation.view.hotel_ui.AssessmentManagementControllerService;
 
-public class AssessmentManagementController {
+public class AssessmentManagementController implements AssessmentManagementControllerService{
 	Hotel_blservice hotelService;
 
 	public ArrayList<Label> getLabelAssessment(String hotelId) {

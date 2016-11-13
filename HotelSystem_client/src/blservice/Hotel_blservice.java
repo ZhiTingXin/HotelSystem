@@ -35,5 +35,7 @@ public interface Hotel_blservice {
 	public ResultMessage deleteLabelAssessment(String hotelId,Label label);
 
 	public String[] getListOfHotelPrefer(String userId);
+	
+	public String getMockID();
 
 }

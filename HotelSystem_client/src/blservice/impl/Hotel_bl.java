@@ -6,12 +6,14 @@ import PO.HotelInfoPO;
 import PO.HotelRoomInfoPO;
 import PO.Label;
 import PO.Rank;
+import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
 import data.service.Hotel_dataService;
 import other.ResultMessage;
 
 public class Hotel_bl implements Hotel_blservice {
 	Hotel_dataService hotelService;
+	HotelInfoVO hotel;
 
 	public HotelInfoPO getHotelInfo(String hotelId) {
 		// TODO Auto-generated method stub
@@ -102,6 +104,11 @@ public class Hotel_bl implements Hotel_blservice {
 			ArrayList<Label> labelList) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public String getMockID() {
+		// TODO Auto-generated method stub
+		return this.hotel.getHotelId();
 	}
 
 }
