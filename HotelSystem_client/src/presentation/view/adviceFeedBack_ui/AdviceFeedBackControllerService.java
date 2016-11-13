@@ -13,8 +13,4 @@ public interface AdviceFeedBackControllerService {
 	
 	public ResultMessage modifyAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo);
 	
-	//Mock¥˙¬ÎºØ≥…≤‚ ‘
-	public String getID();
-	
-	public void add(AdviceFeedBackVO advice);
 }

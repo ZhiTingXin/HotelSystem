@@ -3,6 +3,7 @@ package presentation.controller.userManagementController;
 import java.util.ArrayList;
 
 import VO.HotelStaffVO;
+import other.ResultMessage;
 import presentation.view.userManagement_ui.HotelStaffManagementControllerService;
 
 public class HotelStaffManagementController implements HotelStaffManagementControllerService{
@@ -14,8 +15,8 @@ public class HotelStaffManagementController implements HotelStaffManagementContr
 		return list;
 	}
 
-	public boolean modifyHotelStaffManagement(HotelStaffVO hotelstaff, HotelStaffVO hotelstaffChange) {
-		return false;
+	public ResultMessage modifyHotelStaffManagement(HotelStaffVO hotelstaff) {
+		return ResultMessage.SUCCESSFUL;
 	}
 
 }

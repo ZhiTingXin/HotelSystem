@@ -8,5 +8,9 @@ public interface SystemManagerInfoControllerService {
 	public ResultMessage modifySystemManagerInfo(SystemManagerVO systemManager);
 	
 	public SystemManagerVO getSystemManagerInfo(String systemManager_Name);
+	//²âÊÔMock´úÂë
+	public void add(SystemManagerVO manager);
+	
+	public SystemManagerVO  get();
 	
 }

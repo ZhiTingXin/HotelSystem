@@ -28,13 +28,4 @@ public class AdvicefeedbackController implements AdviceFeedBackControllerService
 		// TODO Auto-generated method stub
 		return advicefeedbackblservice.modifyAdviceFeedBack(advicefeedbackvo);
 	}
-    //MockµÄ²âÊÔ´úÂë
-	public String getID(){
-		return advicefeedbackblservice.getMockID();
-	}
-	
-	public void add(AdviceFeedBackVO advice){
-	    advicefeedbackblservice.setMock(advice);
-	    return;
-	}
 }

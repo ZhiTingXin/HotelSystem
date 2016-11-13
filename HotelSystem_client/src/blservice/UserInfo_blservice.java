@@ -14,4 +14,8 @@ public interface UserInfo_blservice {
     public ResultMessage CustomerinfoModify(CustomerVO Customer,CustemorInfoChangeVO VO);
 	
 	public ResultMessage CustomerinfoShow(CustomerVO Customer);
+    //对于Mock代码的测试
+	public void add(SystemManagerVO manager);
+	
+	public SystemManagerVO  get();
 }
