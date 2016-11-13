@@ -3,6 +3,8 @@ package PO;
 import java.awt.Label;
 import java.util.ArrayList;
 
+import other.Rank;
+
 public class HotelInfoPO {
 	String[] orderListId;
 	String hotelID;
@@ -15,9 +17,9 @@ public class HotelInfoPO {
 	ArrayList<Rank> rankList;
 	ArrayList<Label> labelList;
 
-	public HotelInfoPO(HotelInfoVO hotelInfo) {
-		// TODO Auto-generated constructor stub
-	}
+//	public HotelInfoPO(HotelInfoVO hotelInfo) {
+//		// TODO Auto-generated constructor stub
+//	}
 
 	public ArrayList<OrderPO> getOrders() {
 		return null;

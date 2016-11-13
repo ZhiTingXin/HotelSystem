@@ -7,7 +7,7 @@ public class LoginDataServiceImpl implements LoginDataService{
 
 	public UserPO getUserPO(String user_id) {
 		
-		return new UserPO;
+		return new UserPO();
 	}
 
 	

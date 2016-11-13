@@ -16,7 +16,7 @@ public class HotelStaffManagementController implements HotelStaffManagementContr
 	}
 
 	public ResultMessage modifyHotelStaffManagement(HotelStaffVO hotelstaff) {
-		return false;
+		return ResultMessage.SUCCESSFUL;
 	}
 
 }

@@ -12,6 +12,11 @@ public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 
 	AdviceFeedBackVO advice;
 	//为Mock引入的变量
+//	private String userId;
+	
+	public AdviceFeedBack_bl(){
+		
+	}
 	public ArrayList<AdviceFeedBackVO> getAllAdvice(String userID) {
 		ArrayList<AdviceFeedBackVO> alist = new ArrayList<AdviceFeedBackVO>();
 		AdviceFeedBackPO advice = new AdviceFeedBackPO(AdviceFeedBackState.PROCESSED,"网站经常会出现卡顿","1");
@@ -33,7 +38,8 @@ public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 	public ArrayList<AdviceFeedBackVO> getUnprocessedAdvice(String systemstaffId) {
 		// TODO Auto-generated method stub
 		ArrayList<AdviceFeedBackVO> blist = new ArrayList<AdviceFeedBackVO>();
-		AdviceFeedBackVO advicefeedback = new AdviceFeedBackVO();
+		AdviceFeedBackPO ad = new AdviceFeedBackPO(AdviceFeedBackState.PROCESSED,"网站太水了","3");
+		AdviceFeedBackVO advicefeedback = new AdviceFeedBackVO(ad);
 		blist.add(advicefeedback);
 		return blist;
 	}
@@ -50,24 +56,6 @@ public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 	public ResultMessage setStateOfAdvice(String Adviceid) {
 		// TODO Auto-generated method stub
 		return ResultMessage.SUCCESSFUL;
-	}
-
-	
-	//Mock的测试，到时删除
-//	public void setMock(AdviceFeedBackVO ad){
-//		System.out.println("succ2");
-//		this.advice = ad;
-//		return;
-//	}
-	public String getMockID() {
-		// TODO Auto-generated method stub
-		return advice.getAdviceId();
-	}
-
-	public void setMock(AdviceFeedBackVO advice) {
-		// TODO Auto-generated method stub
-		this.advice = advice;
-		return;
 	}
 
 }
