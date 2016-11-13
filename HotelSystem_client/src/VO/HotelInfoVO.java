@@ -19,9 +19,17 @@ public class HotelInfoVO {
 	ArrayList<String> assessmentList;
 	ArrayList<Rank> rankList;
 	ArrayList<Label> labelList;
-
+	
+	public HotelInfoVO(){
+		super();
+	}
 	public HotelInfoVO(HotelInfoPO hotelInfo) {
 		// TODO Auto-generated constructor stub
+	}
+
+	public HotelInfoVO(String hotelID, String hotelName, String hotelDistrict,
+			String hotelStaffId) {
+
 	}
 
 	public String getHotelId() {

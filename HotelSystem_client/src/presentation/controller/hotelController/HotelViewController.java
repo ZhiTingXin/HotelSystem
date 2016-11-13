@@ -6,8 +6,9 @@ import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
 import other.SortMethod;
+import presentation.view.hotel_ui.HotelViewControllerService;
 
-public class HotelViewController {
+public class HotelViewController implements HotelViewControllerService{
 	Hotel_blservice hotelService;
 
 	public HotelInfoVO getHotelInfo(String hotelId) {

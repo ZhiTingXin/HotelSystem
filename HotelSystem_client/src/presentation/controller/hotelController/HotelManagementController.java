@@ -6,8 +6,9 @@ import PO.HotelInfoPO;
 import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
+import presentation.view.hotel_ui.HotelManagementControllerService;
 
-public class HotelManagementController {
+public class HotelManagementController implements HotelManagementControllerService{
 	Hotel_blservice hotelService;
 
 	public String addHotel(HotelInfoVO hotel) {
@@ -29,6 +30,10 @@ public class HotelManagementController {
 		hotelInfoVO.add(new HotelInfoVO(this.hotelService
 				.getHotelInfo(hotelIdList[0])));
 		return hotelInfoVO;
+	}
+	
+	public String getID(){
+		return hotelService.getMockID();
 	}
 
 }

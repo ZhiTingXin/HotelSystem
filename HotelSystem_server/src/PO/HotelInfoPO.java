@@ -1,6 +1,5 @@
 package PO;
 
-import java.awt.Label;
 import java.util.ArrayList;
 
 public class HotelInfoPO {
@@ -15,9 +14,7 @@ public class HotelInfoPO {
 	ArrayList<Rank> rankList;
 	ArrayList<Label> labelList;
 
-	public HotelInfoPO(HotelInfoVO hotelInfo) {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 	public ArrayList<OrderPO> getOrders() {
 		return null;
@@ -26,11 +23,11 @@ public class HotelInfoPO {
 	public String getHotelID() {
 		return hotelID;
 	}
-
-	public void setHotelID(String hotel_Id) {
-		this.hotelID = hotel_Id;
-	}
 	
+	public void setHotelID(String hotelId) {
+		this.hotelID=hotelId;
+	}
+
 	public String getHotelName() {
 		return hotelName;
 	}
@@ -75,4 +72,6 @@ public class HotelInfoPO {
 	public void deleteLabelAssessment(Label label) {
 		this.labelList.remove(label);
 	}
+	
+	
 }
