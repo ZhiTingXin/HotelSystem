@@ -2,20 +2,41 @@ package data.service.impl;
 
 import java.rmi.RemoteException;
 
+import PO.LoginPO;
+import data.dao.DataFactory;
 import data.dao.LoginDao;
+import data.dao.impl.DataFactoryImpl;
 import data.dao.impl.LoginDaoImpl;
 import data.service.LoginDataService;
-import other.ResultMessage;
+
 
 public class LoginDataServiceImpl implements LoginDataService{
-    LoginDao login;
     
+	private LoginDao loginDao;
+	private DataFactory dataFactory;
+	
     public LoginDataServiceImpl(){
-    	login = new LoginDaoImpl();
+    	dataFactory = new DataFactoryImpl();
+    	loginDao = dataFactory.getLoginDao();
     }
     
-	public ResultMessage confirm(String userId, String password)throws RemoteException {
-		return login.confirm(userId, password);
+
+	public boolean confirm(String userId, String userPassword)throws RemoteException {
+		return loginDao.confirm(userId, userPassword);
 	}
+
+	public boolean add(LoginPO login)throws RemoteException {
+		return loginDao.add(login);
+	}
+
+	public boolean delete(LoginPO login)throws RemoteException {
+		return loginDao.delete(login);
+	}
+
+	public boolean update(LoginPO login) throws RemoteException{
+		return loginDao.update(login);
+	}
+    
+	
 
 }
