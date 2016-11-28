@@ -5,27 +5,37 @@ import java.util.ArrayList;
 import PO.AdviceFeedBackPO;
 import data.dao.AdviceFeedbackDao;
 import other.ResultMessage;
+import other.hibernateUtil;
 
 public class AdviceFeedbackDaoImpl implements AdviceFeedbackDao {
 
-	private ArrayList<AdviceFeedBackPO> adviceList;
-//	private DataFactory datafactory;
+
 	public ResultMessage addAdvice(AdviceFeedBackPO advice) {
-		adviceList.add(advice);
-		return ResultMessage.SUCCESSFUL;
+		try{
+			hibernateUtil.add(advice);
+			return ResultMessage.SUCCESSFUL;
+		}catch(Exception e){
+			e.printStackTrace();
+		    return ResultMessage.FAILED;
+		}
 	}
 	public ResultMessage updateAdvice(AdviceFeedBackPO advice) {
-		for(int i=0;i<adviceList.size();i++){
-			AdviceFeedBackPO advicetemp = adviceList.get(i);
-			if(advicetemp.getAdviceId()==advice.getAdviceId()){
-				adviceList.remove(i);
-				adviceList.add(i,advice);
-			}
+		try{
+			hibernateUtil.update(advice);
+			return ResultMessage.SUCCESSFUL;
+		}catch(Exception e){
+			e.printStackTrace();
+		    return ResultMessage.FAILED;
 		}
-		return ResultMessage.SUCCESSFUL;
 	}
-	public ArrayList<AdviceFeedBackPO> getAdvices(String userId) {
-		return adviceList;
+	public ArrayList<AdviceFeedBackPO> getAdvices(String userId,String type) {
+		ArrayList<AdviceFeedBackPO> list = null;
+		try{
+			list = (ArrayList<AdviceFeedBackPO>) hibernateUtil.findbySome("AdviceFeedBackPO", type, userId);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return list;
 	}
 	
 	

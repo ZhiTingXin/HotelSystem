@@ -14,9 +14,17 @@
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>  
     <property name="hbm2ddl.auto">update</property>  
       
-    <mapping resource="clazz/login.hbm.xml" />  
-    <mapping class="clazz.Order" />
-    <mapping class="clazz.Hotel"/>
-    <mapping class="clazz.PrimaryRoomId"/>
+    <mapping resource="PO/login.hbm.xml" />  
+    <mapping class="PO.OrderPO" />
+    <mapping class="PO.HotelPO"/>
+    <mapping class="PO.RoomPO"/>
+    <mapping class="PO.AdviceFeedBackPO"/>
+    <mapping class="PO.AssessmentPO"/>
+    <mapping class="PO.CustomerPO"/>
+    <mapping class="PO.HotelStaffPO"/>
+    <mapping class="PO.HotelStrategyPO"/>
+    <mapping class="PO.SystemManagerPO"/>
+    <mapping class="PO.SystemStaffPO"/>
+    <mapping class="PO.SystemStrategyPO"/>
 </session-factory>  
 </hibernate-configuration> 

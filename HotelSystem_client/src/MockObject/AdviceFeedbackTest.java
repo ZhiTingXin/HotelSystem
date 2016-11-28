@@ -59,10 +59,10 @@ public class AdviceFeedbackTest{
 		MockAdviceFeedback ad = new MockAdviceFeedback("网站风格不好",AdviceFeedBackState.PROCESSED,"12");
 		assertEquals(ResultMessage.SUCCESSFUL,con.addAdviceFeedback(ad));
 	}
-	@Test
-	public void testSetstate(){
-		AdviceReplyController con = new AdviceReplyController();
-		String adID= "12";
-		assertEquals(ResultMessage.SUCCESSFUL,con.setStateOfAdvice(adID));
-	}
+//	@Test
+//	public void testSetstate(){
+//		AdviceReplyController con = new AdviceReplyController();
+//		String adID= "12";
+//		assertEquals(ResultMessage.SUCCESSFUL,con.setStateOfAdvice(adID));
+//	}
 }

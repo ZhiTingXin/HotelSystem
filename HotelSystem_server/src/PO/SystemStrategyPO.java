@@ -2,6 +2,12 @@ package PO;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "systemstrategy")
 public class SystemStrategyPO {
 
 	private String systemStrategy_name;
@@ -9,17 +15,17 @@ public class SystemStrategyPO {
     private Date begin_date;
     private Date end_date;
     
-    public SystemStrategyPO(String systemstrategy_name,double count,Date begin,
-    		Date end){
+    public SystemStrategyPO(){
     	super();
+    }
+    public SystemStrategyPO(String systemstrategy_name,double count,Date begin,Date end){
     	this.systemStrategy_name=systemstrategy_name;
     	this.discount = count;
     	this.begin_date = begin;
     	this.end_date =end;
     }
-    public SystemStrategyPO(){
-    	super();
-    }
+    
+    @Id
 	public String getSystemStrategy_name() {
 		return systemStrategy_name;
 	}

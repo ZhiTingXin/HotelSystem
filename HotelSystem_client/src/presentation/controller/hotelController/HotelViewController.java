@@ -12,8 +12,7 @@ public class HotelViewController implements HotelViewControllerService{
 	Hotel_blservice hotelService;
 
 	public HotelInfoVO getHotelInfo(String hotelId) {
-		HotelInfoVO vo = new HotelInfoVO(
-				this.hotelService.getHotelInfo(hotelId));
+		HotelInfoVO vo = new HotelInfoVO();
 		return vo;
 	}
 
@@ -27,10 +26,10 @@ public class HotelViewController implements HotelViewControllerService{
 	}
 
 	public ArrayList<HotelInfoVO> getListOfHotel(String[] hotelId) {
-		String[] hotelIdList = this.getListOfHotelId();
+//		String[] hotelIdList = this.getListOfHotelId();
 		ArrayList<HotelInfoVO> voList = new ArrayList<HotelInfoVO>();
-		voList.add(new HotelInfoVO(this.hotelService
-				.getHotelInfo(hotelIdList[0])));
+//		voList.add(new HotelInfoVO(this.hotelService
+//				.getHotelInfo(hotelIdList[0])));
 		return voList;
 	}
 

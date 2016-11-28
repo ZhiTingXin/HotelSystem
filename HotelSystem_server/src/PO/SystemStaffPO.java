@@ -1,9 +1,16 @@
 package PO;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "systemstaff")
 public class SystemStaffPO {
+	@Id
 	private String id;
 
-	private String username;
+	private String staffName;
 
 	private String phone;
 	
@@ -13,10 +20,9 @@ public class SystemStaffPO {
 		super();
 	}
 
-	public SystemStaffPO(String id, String username, String phone) {
-		super();
+	public SystemStaffPO(String id, String staffName, String phone) {
 		this.id = id;
-		this.username = username;
+		this.staffName = staffName;
 		this.phone = phone;
 	}
 
@@ -28,12 +34,12 @@ public class SystemStaffPO {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getStaffName() {
+		return staffName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String staffName) {
+		this.staffName = staffName;
 	}
 
 	public String getPhone() {

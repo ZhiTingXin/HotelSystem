@@ -2,7 +2,7 @@ package VO;
 
 import java.util.ArrayList;
 
-import PO.HotelInfoPO;
+
 import PO.HotelRoomInfoPO;
 import PO.HotelStrategyPO;
 import PO.Label;
@@ -23,9 +23,9 @@ public class HotelInfoVO {
 	public HotelInfoVO(){
 		super();
 	}
-	public HotelInfoVO(HotelInfoPO hotelInfo) {
-		// TODO Auto-generated constructor stub
-	}
+//	public HotelInfoVO(HotelInfoPO hotelInfo) {
+//		// TODO Auto-generated constructor stub
+//	}
 
 	public HotelInfoVO(String hotelID, String hotelName, String hotelDistrict,
 			String hotelStaffId) {

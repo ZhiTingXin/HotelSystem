@@ -17,5 +17,4 @@ public interface AdviceFeedBack_blservice {
 
     public ArrayList<AdviceFeedBackVO> getProcessedAdvice(String systemstaffId);
 	
-	public ResultMessage setStateOfAdvice(String Adviceid);
 }

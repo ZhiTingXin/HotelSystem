@@ -1,8 +1,6 @@
 package presentation.controller.hotelController;
 
 import java.util.ArrayList;
-
-import PO.HotelInfoPO;
 import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
 import other.ResultMessage;
@@ -12,28 +10,28 @@ public class HotelManagementController implements HotelManagementControllerServi
 	Hotel_blservice hotelService;
 
 	public String addHotel(HotelInfoVO hotel) {
-		return this.hotelService.addHotel(new HotelInfoPO(hotel));
-	};
-
-	public String addHotelStaff(String hotelId) {
-		return this.addHotelStaff(hotelId);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public ResultMessage showAvailableHotelList(
-			ArrayList<HotelInfoVO> availableHotelList) {
-		return ResultMessage.SUCCESSFUL;
+	public String addHotelStaff(String hotelId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ResultMessage showAvailableHotelList(ArrayList<HotelInfoVO> availableHotelList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public ArrayList<HotelInfoVO> getAvailableHotelList() {
-		String[] hotelIdList = this.hotelService.getListOfHotelId();
-		ArrayList<HotelInfoVO> hotelInfoVO = new ArrayList<HotelInfoVO>();
-		hotelInfoVO.add(new HotelInfoVO(this.hotelService
-				.getHotelInfo(hotelIdList[0])));
-		return hotelInfoVO;
+		// TODO Auto-generated method stub
+		return null;
 	}
-	
-	public String getID(){
-		return hotelService.getMockID();
+
+	public String getID() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

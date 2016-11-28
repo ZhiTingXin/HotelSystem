@@ -2,20 +2,20 @@ package blservice;
 
 import java.util.ArrayList;
 
-import PO.HotelInfoPO;
+import PO.HotelPO;
 import PO.HotelRoomInfoPO;
 import PO.Label;
 import PO.Rank;
 import other.ResultMessage;
 
 public interface Hotel_blservice {
-	public HotelInfoPO getHotelInfo(String hotelId);
+	public HotelPO getHotelInfo(String hotelId);
 
-	public ResultMessage modifyHotelInfo(HotelInfoPO hotelInfo);
+	public ResultMessage modifyHotelInfo(HotelPO hotelInfo);
 
 	public String[] getListOfHotelId();
 
-	public String addHotel(HotelInfoPO hotel);
+	public String addHotel(HotelPO hotel);
 
 	public String addHotelStaff(String hotelId);
 
@@ -36,6 +36,5 @@ public interface Hotel_blservice {
 
 	public String[] getListOfHotelPrefer(String userId);
 	
-	public String getMockID();
 
 }

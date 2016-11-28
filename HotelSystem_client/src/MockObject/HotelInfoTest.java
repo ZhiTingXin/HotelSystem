@@ -9,12 +9,12 @@ import presentation.controller.hotelController.HotelManagementController;
 
 
 
-public class HotelInfoTest {
-	@Test
-	public void testHotelId(){
-		MockHotelInfo hotelInfo=new MockHotelInfo("12345678", "金陵饭店", "新街口", "201235");
-		HotelManagementController con1=new HotelManagementController();
-		con1.addHotel(hotelInfo);
-		assertEquals("12345678", con1.getID());
-	}
-}
+//public class HotelInfoTest {
+//	@Test
+//	public void testHotelId(){
+//		MockHotelInfo hotelInfo=new MockHotelInfo("12345678", "金陵饭店", "新街口", "201235");
+//		HotelManagementController con1=new HotelManagementController();
+//		con1.addHotel(hotelInfo);
+//		assertEquals("12345678", con1.getID());
+//	}
+//}

@@ -16,23 +16,22 @@ public class AdviceReplyController implements AdviceReplyControllerService{
 		advicefeedbackblservice = new AdviceFeedBack_bl();
 	}
 	public ArrayList<AdviceFeedBackVO> getUnprocessedAdvice(String systemstaffId) {
-		// TODO Auto-generated method stub
+		
 		return advicefeedbackblservice.getUnprocessedAdvice(systemstaffId);
 	}
 
 	public ArrayList<AdviceFeedBackVO> getProcessedAdvice(String systemstaffId) {
-		// TODO Auto-generated method stub
+		
 		return advicefeedbackblservice.getProcessedAdvice(systemstaffId);
-	}
-
-	public ResultMessage setStateOfAdvice(String Adviceid) {
-		// TODO Auto-generated method stub
-		return advicefeedbackblservice.setStateOfAdvice(Adviceid);
 	}
 	
 	public ResultMessage addAdviceFeedback(AdviceFeedBackVO advice){
 		
 		return advicefeedbackblservice.addAdviceFeedBack(advice);
+	}
+	public ResultMessage update(AdviceFeedBackVO advice) {
+		
+		return advicefeedbackblservice.modifyAdviceFeedBack(advice);
 	}
 
 }

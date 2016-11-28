@@ -11,5 +11,6 @@ public interface AdviceFeedbackDao {
 	
 	public ResultMessage updateAdvice(AdviceFeedBackPO advice);
 	
-	public ArrayList<AdviceFeedBackPO> getAdvices(String userId);
+	public ArrayList<AdviceFeedBackPO> getAdvices(String userId,String type);
+	
 }

@@ -1,5 +1,12 @@
 package data.service;
 
-public interface RegisterDataService {
-	public boolean addUserPO(String user_id,String password);
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+import PO.LoginPO;
+import other.ResultMessage;
+
+public interface RegisterDataService extends Remote {
+
+	public ResultMessage add(LoginPO login) throws RemoteException;
 }

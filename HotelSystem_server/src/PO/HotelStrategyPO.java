@@ -1,45 +1,45 @@
 package PO;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="HotelStrategyPO")
 public class HotelStrategyPO {
-	String hotelStrategyInfo;
-	String hotelStaffID;
+	private String id;
+	private String hotelStrategyInfo;
 	String hotelID;
 
 	/**
 	 * 
-	 * @param hotelStrategyInfo
-	 * @param hotelStaffID
-	 * @param hotelID
+	 *  hotelStrategyInfo 酒店促销策略的基本内容
+	 *  hotelID 酒店的id
 	 */
-	public HotelStrategyPO(String hotelStrategyInfo, String hotelStaffID,
-			String hotelID) {
-		this.hotelStaffID = hotelStaffID;
+	public HotelStrategyPO(){}
+	public HotelStrategyPO(String hotelStrategyInfo,String hotelID) {
+		super();
 		this.hotelStrategyInfo = hotelStrategyInfo;
 		this.hotelID = hotelID;
 	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public String gethotelStrategyInfo() {
-		return this.hotelStrategyInfo;
+	@Id
+	public String getId() {
+		return id;
 	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public String gethotelStaffID() {
-		return this.hotelStaffID;
+	public void setId(String id) {
+		this.id = id;
 	}
-
-	/**
-	 * 
-	 * @return
-	 */
+	public String getHotelStrategyInfo() {
+		return hotelStrategyInfo;
+	}
+	public void setHotelStrategyInfo(String hotelStrategyInfo) {
+		this.hotelStrategyInfo = hotelStrategyInfo;
+	}
 	public String getHotelID() {
-		return this.hotelID;
+		return hotelID;
 	}
+	public void setHotelID(String hotelID) {
+		this.hotelID = hotelID;
+	}
+	
 }

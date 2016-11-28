@@ -1,9 +1,11 @@
 package data.service;
 
-import PO.UserPO;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public interface LoginDataService {
+import other.ResultMessage;
 
-	public UserPO getUserPO(String user_id);
+public interface LoginDataService extends Remote {
 
+	public ResultMessage confirm(String userId,String password)throws RemoteException;
 }

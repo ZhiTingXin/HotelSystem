@@ -1,6 +1,13 @@
 package PO;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "hotelstaff")
 public class HotelStaffPO {
+	@Id
 	private String id;
 
 	private String username;
